@@ -1,0 +1,24 @@
+server:
+    port: 9001
+    servlet:
+        context-path: /
+
+spring:
+    application:
+        name: mediaIndex
+    datasource:
+        url: jdbc:mysql://172.10.10.186:3306/nsg?characterEncoding=UTF8&&autoReconnect=true
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: cetc@2017
+
+mybatis:
+    mapper-locations: classpath:/mapper/*xml
+    typeAliasesPackage: com.bdri.nsg.entity
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+mybatis-plus:
+    global-config:
+        db-config:
+            table-prefix: mi_
